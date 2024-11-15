@@ -1,0 +1,424 @@
+.form_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > div {
+    background-color: var(--white);
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    .form_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include f24(500);
+      .close {
+        cursor: pointer;
+      }
+    }
+    .form_body {
+    }
+  }
+}
+
+// .cust_form {
+//     position: fixed;
+//     inset: 0;
+//     // display: grid;
+//     // place-items: center;
+//     background: rgba(0, 0, 0, 0.5);
+//     z-index: 100;
+//     user-select: none;
+//     input {
+//       @include f14;
+//       &::placeholder {
+//         @include f14;
+//         color: rgba(51, 51, 51, 0.55);
+//       }
+//     }
+//     .placeholder {
+//       @include f14;
+//       color: rgba(51, 51, 51, 0.55);
+//     }
+//     .cust_form_main {
+//       width: 33.33%;
+//       min-width: 420px;
+//       height: 100dvh;
+//       background: #fff;
+//       // padding: 20px;
+//       border-radius: 12px;
+//       margin: 0 0 0 auto;
+//       display: flex;
+//       flex-direction: column;
+//       .form_type {
+//         flex-shrink: 0;
+//         @include f16(600);
+//         text-transform: capitalize;
+//         text-align: center;
+//         padding: 20px;
+//       }
+//       .form_group {
+//         padding: 10px 20px 20px 20px;
+//         display: flex;
+//         flex-direction: column;
+//         gap: 24px;
+//         overflow: auto;
+//         @include f16;
+//         // input::placeholder {
+//         //   color: #fff;
+//         // }
+//         .chips_group {
+//           display: flex;
+//           flex-wrap: wrap;
+//           gap: 10px;
+//           &.f_column {
+//             flex-direction: column;
+//           }
+//           > div {
+//             display: flex;
+//             justify-content: space-between;
+//             gap: 10px;
+
+//             cursor: pointer;
+//             @include f14(500);
+//             padding: 8px 16px;
+//             border-radius: 16px;
+//             border: 1px solid #e1e1e1;
+
+//             &.hidden {
+//               background: #e7e5ea;
+//             }
+//           }
+//         }
+//         .display_group {
+//           display: flex;
+//           align-items: center;
+//           gap: 10px;
+//           width: 100%;
+//           .txt {
+//             width: 100%;
+//             overflow: hidden;
+//             text-overflow: ellipsis;
+//           }
+//           .photo {
+//             height: 24px;
+//             width: 24px;
+//             background: #e1e1e1;
+//             background-size: cover;
+//             background-position: center;
+//             background-repeat: no-repeat;
+//             border-radius: 50%;
+
+//             ~ .txt {
+//               width: calc(100% - 34px);
+//             }
+//           }
+//         }
+//         .cust_form_photo {
+//           cursor: pointer;
+//           margin: 0 auto;
+//           width: 100%;
+//           svg {
+//             height: 20px;
+//             width: auto;
+//           }
+//           .delete {
+//             height: 15px;
+//           }
+//           .display_group {
+//             background: #efefef;
+//             padding: 10px 12px;
+//             border-radius: 8px;
+//             .txt {
+//               width: calc(100% - 34px - 15px);
+//               @include f14;
+//             }
+//           }
+//           .cust_form_photo_main {
+//             height: 100px;
+//             width: 100px;
+//             border: 1px solid #efefef;
+//             background-color: #efefef;
+//             border-radius: 50%;
+//             background-position: center;
+//             background-repeat: no-repeat;
+//             background-size: cover;
+//           }
+//           input {
+//             display: none;
+//           }
+//         }
+//         .title {
+//           // position: absolute;
+//           // height: fit-content;
+//           // top: 50%;
+//           // left: 5px;
+//           // bottom: 0;
+//           // margin: auto 0;
+//           padding: 0 5px;
+//           margin: 0 0 8px 0;
+//           // background: #fff;
+//           // transform: translateY(-50%);
+//           // transition: all 0.3s linear;
+//           // &[active="true"] {
+//           //   top: 0%;
+//           // }
+//           display: flex;
+//           @include f12(600);
+//           justify-content: space-between;
+//           align-items: center;
+//           .required {
+//             @include f11(400);
+//             color: #333333b3;
+//           }
+//         }
+//         .titleadd {
+//           padding: 0 5px;
+//           margin: 8px 0 0 auto;
+//           @include f11(400);
+//           color: #333333b3;
+//           width: fit-content;
+//           cursor: pointer;
+//           text-decoration: underline;
+//         }
+//         .cust_form_input {
+//           position: relative;
+//           input {
+//             padding: 5px 10px;
+//             @include f16;
+//             line-height: unset;
+//             width: 100%;
+//             border-radius: 4px;
+//             border: 0;
+//             outline: 1px solid #efefef;
+//             background: #efefef;
+//             &:focus {
+//               outline: 1px solid #000;
+//               // & ~ .title {
+//               //   top: 0%;
+//               //   @include f13;
+//               // }
+//             }
+//             // &:not(:placeholder-shown) {
+//             //   & ~ .title {
+//             //     top: 0%;
+//             //     @include f13;
+//             //   }
+//             // }
+//           }
+//           // &[error="true"] {
+//           //   input {
+//           //     outline: 1px solid red;
+//           //   }
+//           // }
+//         }
+//         .cust_form_multiselect {
+//           .dropdown_selections {
+//             position: relative;
+//             min-height: 36px;
+//             display: flex;
+//             flex-wrap: wrap;
+//             gap: 10px;
+//             align-items: center;
+//             cursor: pointer;
+//             border-radius: 8px;
+//             padding: 5px 10px;
+//             transition: all 0.3s ease-in;
+//             border: 1px solid #e1e1e1;
+//             background: #efefef;
+//             &.f_column {
+//               flex-direction: column;
+//               align-items: start;
+//             }
+//             &[error="true"] {
+//               border-color: red;
+//             }
+//             &:focus-within {
+//               outline: 1px solid #150332;
+//             }
+//           }
+//           position: relative;
+//           .dropdown_body {
+//             z-index: 1;
+//             position: absolute;
+//             width: 100%;
+//             top: 100%;
+//             left: 0;
+//             background: var(--white);
+//             max-height: 0;
+//             transition: max-height 0.3s linear;
+//             outline: 1px solid var(--neutral-gray-mid);
+//             overflow: hidden;
+//             opacity: 0;
+//             visibility: hidden;
+//             border-radius: 8px;
+//             overflow: auto;
+//             // outline: 10px solid red;
+//             > div {
+//               padding: 5px 10px;
+//               cursor: pointer;
+//               border-top: 1px solid #fff;
+//               @include f14;
+//               &.hidden {
+//                 background: #efefef;
+//               }
+//             }
+//             &:hover {
+//               visibility: visible;
+//               max-height: 300px;
+//               opacity: 1;
+//             }
+//             .search_main {
+//               position: sticky;
+//               top: 0;
+//               background-color: #fff;
+//               padding: 0;
+//             }
+//           }
+
+//           input {
+//             outline: 0;
+//             border: 0;
+//             width: 200px;
+//             &.hide {
+//               position: absolute;
+//               z-index: -1;
+//               margin: 0;
+//               opacity: 0;
+//               &:focus {
+//                 ~ .dropdown_selections {
+//                   outline: 1px solid #000;
+//                   // & ~ .title {
+//                   //   top: 0%;
+//                   //   @include f13;
+//                   // }
+//                 }
+//                 ~ .dropdown_body {
+//                   visibility: visible;
+//                   max-height: 300px;
+//                   opacity: 1;
+//                 }
+//               }
+//               // &:not(:placeholder-shown) {
+//               //   ~ .dropdown_selections {
+//               //     .title {
+//               //       top: 0%;
+//               //       @include f13;
+//               //     }
+//               //   }
+//               // }
+//             }
+//             &.search {
+//               width: calc(100% - 20px);
+//               padding: 5px 10px;
+//               @include f16;
+//               margin: 10px;
+//               outline: 1px solid #e1e1e1;
+//               border-radius: 4px;
+
+//               &:focus {
+//                 outline: 1px solid #150332;
+//               }
+//             }
+//             &.txt_input {
+//               width: calc(100% - 20px);
+//               // padding: 5px 10px;
+//               padding: 0;
+//               @include f16;
+//               margin: 0;
+//               outline: 0;
+//               border: 0;
+//               border-radius: 4px;
+//               background: transparent;
+
+//               &:focus {
+//                 // outline: 1px solid #150332;
+//               }
+//             }
+//             &:not(.hide) {
+//               &::placeholder {
+//                 // color: var(--neutral-gray-mid);
+//               }
+//             }
+//             &:focus {
+//               ~ .dropdown_body {
+//                 visibility: visible;
+//                 max-height: 300px;
+//                 opacity: 1;
+//               }
+//               // & ~ .title {
+//               //   top: 0%;
+//               //   @include f13;
+//               // }
+//             }
+//             // &:not(:placeholder-shown) {
+//             //   .title {
+//             //     top: 0%;
+//             //     @include f13;
+//             //   }
+//             // }
+//           }
+//         }
+//       }
+//       .btn_group {
+//         margin: auto 0 0 0;
+//         flex-shrink: 0;
+//         padding: 20px;
+//         display: flex;
+//         gap: 0 6px;
+//         // justify-content: space-between;
+//         > div {
+//           cursor: pointer;
+//           @include f14(600);
+//           border-radius: 8px;
+//           padding: 6px 16px;
+//           // border: 1px solid var(--neutral-gray-mid);
+//           &.save {
+//             background: #a19aad;
+//             color: #fff;
+//             cursor: no-drop;
+//             &[active="true"] {
+//               cursor: pointer;
+//               background: #150332;
+//               // opacity: 1;
+//             }
+//           }
+//           &.dark {
+//             background: #a19aad;
+//             color: #fff;
+//             cursor: no-drop;
+
+//             &[active="true"] {
+//               cursor: pointer;
+//               background: #150332;
+//               // opacity: 1;
+//             }
+//           }
+//           &.done {
+//             background: #fff;
+//             color: green;
+//             cursor: no-drop;
+//             display: flex;
+//             align-items: center;
+//             gap: 0 5px;
+//             svg {
+//               width: 14px;
+//               g {
+//                 path {
+//                   fill: green;
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }

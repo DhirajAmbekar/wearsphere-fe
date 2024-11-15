@@ -75,6 +75,36 @@ body {
   width: 24px;
 }
 
+.form_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form_container > div {
+  background-color: var(--white);
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 50%;
+  height: 50%;
+}
+.form_container > div .form_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 500;
+}
+.form_container > div .form_header .close {
+  cursor: pointer;
+}
 .product_container .product_header {
   display: flex;
   align-items: center;

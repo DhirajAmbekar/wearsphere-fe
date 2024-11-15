@@ -3,20 +3,62 @@ import { AddForm } from "../components/AddForm";
 
 export const Product = () => {
   const [AddBtn, setAddBtn] = useState(false);
-
+  const [product, setProduct] = useState({
+    name: "",
+    category: "",
+    price: "",
+    description: "",
+    images: [],
+  });
   return (
     <div className="product_container">
       {AddBtn && (
         <AddForm
           {...{
-            title: "Products",
+            type: "Products",
             inp_options: [
               {
                 type: "text",
+                inpkey: "name",
+                title: "Name",
+              },
+              {
+                type: "text",
+                inpkey: "category",
+                title: "Category",
+              },
+              {
+                type: "text",
+                inpkey: "price",
+                title: "Price",
+              },
+              {
+                type: "text",
+                inpkey: "description",
+                title: "Description",
+              },
+              {
+                type: "images",
+                inpkey: "images",
+                title: "Images",
               },
             ],
-            
-            onclick: () => {
+            setdata: setProduct,
+            data: product,
+            actions: [
+              {
+                type: "save",
+                btntype: "",
+              },
+              {
+                type: "close",
+                btntype: "",
+              },
+            ],
+            save: () => {
+              setAddBtn((prev) => !prev);
+            },
+            close: () => {
               setAddBtn((prev) => !prev);
             },
           }}
