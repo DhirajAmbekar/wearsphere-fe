@@ -1,0 +1,22 @@
+.product_container {
+  .product_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    .product_header_txt {
+      @include f24(500);
+    }
+    .product_header_btn {
+      @include f18;
+      padding: 10px 20px;
+      background-color: var(--charcoal);
+      color: var(--white);
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  .product_body {
+    
+  }
+}

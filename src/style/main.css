@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+:root {
+  --base: "";
+  --black: #000;
+  --white: #fff;
+  --light_gray: #d3d3d3;
+  --charcoal: #4a4a4a;
+}
+
+body {
+  font-family: "Figtree";
+}
+
+.main_navbar_container {
+  background-color: var(--black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 10px 10px var(--light_gray);
+}
+.main_navbar_container .navbar_box {
+  height: 70px;
+  width: calc(100% - 200px);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_navbar_container .navbar_box .navbar_links {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  color: var(--light_gray);
+}
+.main_navbar_container .navbar_box .navbar_links > div {
+  padding: 3px 12px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+}
+.main_navbar_container .navbar_box .navbar_links > div:hover {
+  background-color: var(--charcoal);
+}
+.main_navbar_container .navbar_box .navbar_links > div[active=true] {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 600;
+  background-color: var(--charcoal);
+}
+.main_navbar_container .navbar_box .navbar_actions {
+  display: flex;
+  gap: 0 20px;
+  align-items: center;
+}
+.main_navbar_container .navbar_box .navbar_actions > div {
+  background-color: var(--light_gray);
+  aspect-ratio: 1;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.main_navbar_container .navbar_box .navbar_actions > div:hover {
+  box-shadow: 0 10px 10px var(--charcoal);
+  transition: box-shadow 0.3s linear;
+}
+.main_navbar_container .navbar_box .navbar_actions > div svg {
+  height: 24px;
+  width: 24px;
+}
+
+.product_container .product_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+.product_container .product_header .product_header_txt {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 500;
+}
+.product_container .product_header .product_header_btn {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 400;
+  padding: 10px 20px;
+  background-color: var(--charcoal);
+  color: var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+body .layout .allpagescollection {
+  margin: 70px 0 0 0;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+$const_font_weight: 400;
+body {
+  font-family: "Figtree";
+}
+
+@mixin font_generator($font_size, $line_height, $weight) {
+  font-size: calc($font_size * 1px);
+  line-height: calc($line_height * 1%);
+  font-weight: $weight;
+}
+
+@mixin f14($weight: $const_font_weight) {
+  @include font_generator(14, 150, $weight);
+}
+@mixin f16($weight: $const_font_weight) {
+  @include font_generator(16, 150, $weight);
+}
+@mixin f18($weight: $const_font_weight) {
+  @include font_generator(18, 150, $weight);
+}
+@mixin f24($weight: $const_font_weight) {
+  @include font_generator(24, 150, $weight);
+}

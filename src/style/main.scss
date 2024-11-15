@@ -1,0 +1,15 @@
+@import "./color";
+@import "./font";
+@import "./components/navbar";
+@import "./pages/product";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  .layout {
+    .allpagescollection {
+      margin: 70px 0 0 0;
+      
+    }
+  }
+}
